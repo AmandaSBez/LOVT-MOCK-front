@@ -12,6 +12,8 @@ body {
     margin-right: auto;
     display: block;
     flex-wrap: nowrap;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #888888;
 }
 
 main{
@@ -49,7 +51,7 @@ header {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 40px;
+    padding-bottom: 70px;
 }
 
 .loft {
@@ -61,27 +63,37 @@ header {
     width: 100%;
 }
 
+.price {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+.price button {
+    width: 70px;
+    height: 28px; 
+    border-radius: 14px;
+    color: white;
+    border-style: none;
+    font-size: large;
+}
+
+#square_new {
+    background: #51D275;
+}
+
+#square_sale {
+    background: #DC9730;
+}
+
+.lin_img p {
+    font-size: xx-large;
+}
+
 .lin_img img {
     width: 100%;
-    padding: 5px;
+    padding: 15px 0px;
 }
-
-/* .col_img div {
-    width: 256px;
-    height: 242px;
-    background: #EEEEEE;
-}
-
-.col_img p {
-    width: 231px;
-    height: 44px;
-    font-family: Ropa Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 10px;
-    line-height: 11px;
-    text-align: justify;
-} */
 
 footer {
     display: flex;
