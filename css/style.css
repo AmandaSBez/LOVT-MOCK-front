@@ -152,24 +152,32 @@ header .opcoes {
 }
 
 footer {
+    background-color: rgba(5, 5, 5, 0.87);
+}
+
+footer .container {
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(5, 5, 5, 0.87);
 }
 
 #mapa {
-    padding: 30px 185px;
+    padding:  10px 0;
 }
 
-footer .contato {
-    width: 80%;
-    text-align: justify;
+footer .contato .social{
+    display: flex;
+    /* text-align: justify; */
     line-height: 40px;
     
 }
 .social {
     width: 100%;
-    padding: 10px 0px;
+    /* padding: 10px 0px; */
+}
+
+footer .container {
+    width: 900px;
+    margin: 0 auto;
 }
