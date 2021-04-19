@@ -56,6 +56,9 @@ header {
 .loft {
     width: 400px;
     background: #EEEEEE;
+    -webkit-box-shadow: 0px 0px 9px 2px #c7c7c7;
+    -moz-box-shadow: 0px 0px 9px 2px #8d8c8c;
+    box-shadow: 0px 0px 9px 2px #525151;
 }
 
 .loft img {
@@ -135,4 +138,15 @@ footer {
     justify-content: space-between;
     align-items: center;
     background-color: rgba(5, 5, 5, 0.87);
+}
+
+#mapa {
+    padding: 30px 185px;
+}
+
+footer .contato {
+    width: 80%;
+    text-align: justify;
+    line-height: 40px;
+    
 }
