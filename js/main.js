@@ -47,19 +47,29 @@ formContact.addEventListener("submit", (evento) => {
     //validar se todos os campos estão preenchidos
     let nomeValue = document.querySelector("#input_nome").value;
     let emailValue = document.querySelector("#input_email").value;
+    let telefoneValue = document.querySelector("#input_telefone").value;
 
-    if (!nomeValue || !emailValue) {
+    if (!nomeValue || !emailValue || !telefoneValue) {
         alert("Campo não preenchido");
         nomeValue.focus();
         emailValue.focus();
     }
     //validar se nome tem 2 ou mais caracteres
+    if(nomeValue.length <= 2){
+        alert("Nome contém 2 ou mais caracteres");
+    }
     //validar se telefone tem no minimo 8 caracteres
+    if(telefoneValue.length < 8){
+        alert("Telefone deve ter no mínimo 8 caracteres");
+    }
     //validar se o campo do email tem @ (Google: validação com Regex)
-    const re = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+    const re = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     console.log(re.test(emailValue));
 
     if (re.test(emailValue) == false) {
         alert("Email não existe");
+    }
+    else{
+        alert("Contato realizado!");
     }
 })
