@@ -19,23 +19,47 @@ console.log(ola);
 
 ola.style.color = "Orange"
 
-document.getElementById("ola").onclick = function() {darkMode()};
+document.getElementById("ola").onclick = function () { darkMode() };
 
 function darkMode() {
     var element = document.body;
     element.classList.toggle("dark-mode");
 }
 
-document.querySelector("#btn-submit-contact").addEventListener("click", (evento) => {
-    evento.preventDefault(); //cancelando o envio temporariamente
+// document.querySelector("#btn-submit-contact").addEventListener("click", (evento) => {
+//     evento.preventDefault(); //cancelando o envio temporariamente
 
+//     let nomeValue = document.querySelector("#input_nome").value;
+//     let emailValue = document.querySelector("#input_email").value;
+
+//     console.log(nomeValue);
+//     console.log(emailValue);
+//     //validacao dos campos
+//     //exibição de mensagens de erro
+//     //envio do formulário
+// });
+
+let formContact = document.querySelector("#form-contact");
+
+formContact.addEventListener("submit", (evento) => {
+    //interrompendo o envio do formulario
+    evento.preventDefault();
+    //validar se todos os campos estão preenchidos
     let nomeValue = document.querySelector("#input_nome").value;
     let emailValue = document.querySelector("#input_email").value;
 
-    console.log(nomeValue);
-    console.log(emailValue);
-    //validacao dos campos
-    //exibição de mensagens de erro
-    //envio do formulário
-});
-  
+    if (!nomeValue || !emailValue) {
+        alert("Campo não preenchido");
+        nomeValue.focus();
+        emailValue.focus();
+    }
+    //validar se nome tem 2 ou mais caracteres
+    //validar se telefone tem no minimo 8 caracteres
+    //validar se o campo do email tem @ (Google: validação com Regex)
+    const re = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+    console.log(re.test(emailValue));
+
+    if (re.test(emailValue) == false) {
+        alert("Email não existe");
+    }
+})
