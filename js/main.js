@@ -25,4 +25,17 @@ function darkMode() {
     var element = document.body;
     element.classList.toggle("dark-mode");
 }
+
+document.querySelector("#btn-submit-contact").addEventListener("click", (evento) => {
+    evento.preventDefault(); //cancelando o envio temporariamente
+
+    let nomeValue = document.querySelector("#input_nome").value;
+    let emailValue = document.querySelector("#input_email").value;
+
+    console.log(nomeValue);
+    console.log(emailValue);
+    //validacao dos campos
+    //exibição de mensagens de erro
+    //envio do formulário
+});
   
